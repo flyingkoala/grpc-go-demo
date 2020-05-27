@@ -26,11 +26,12 @@ type server struct{}
 // SayHello implements helloworld.GreeterServer
 func (s *server) SayHello(ctx context.Context, in *pb.HelloRequest) (*pb.HelloReply, error) {
 	fmt.Println("######### get client request name :"+in.Name)
-	return &pb.HelloReply{Message: "Hello " + in.Name}, nil
+	return &pb.HelloReply{Message: "GO gRpc服务的响应为： Hello " + in.Name}, nil
 }
 
 func main() {
 	lis, err := net.Listen("tcp", port)
+	fmt.Println(port)
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
 	}
