@@ -5,6 +5,6 @@
 
 ## proto文件编译为go文件命令
 // protoc --go_out=plugins=grpc:{输出目录}  {proto文件}   
-protoc --go_out=plugins=grpc:./test/ ./test.proto
+protoc --go_out=plugins=grpc:./helloworld/ ./helloworld.proto
 
 
